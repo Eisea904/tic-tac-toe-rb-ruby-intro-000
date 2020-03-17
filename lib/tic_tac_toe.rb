@@ -51,7 +51,7 @@ def current_player(board)
     player = "O"
   end
   return player
-
+end
 
 def turn(board)
   puts "Make your move, if you dare...!"
