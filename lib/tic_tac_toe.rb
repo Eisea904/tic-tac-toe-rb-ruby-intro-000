@@ -126,7 +126,9 @@ def play(board)
 
   if won?(board)
     puts "Congratulations #{winner(board)}!"
+    puts "You will survive!"
   elsif draw?(board)
     puts "Cat's Game!"
+    puts "You together shall perish! MWAH HA HAA...! "
   end
 end
