@@ -33,6 +33,26 @@ def valid_move?(board, index)
   board[index] > 9 && board[index] == !position_taken?(board, index)
 end
 
+def turn_count(board)
+  turn = 0
+  board.each do |index|
+    if index == "X" || index == "O"
+      turn += 1
+    end
+  end
+  return turn
+end
+
+def current_player(board)
+  num_turns = turn_count(board)
+  if num_turns % 2 == 0
+    player = "X"
+  else
+    player = "O"
+  end
+  return player
+end
+
 def turn(board)
   puts "Make your move, if you dare...!"
   user_input = gets.chomp
@@ -45,16 +65,6 @@ def turn(board)
   else
     turn(board)
   end
-end
-
-def turn_count(board)
-  turn = 0
-  board.each do |index|
-    if index == "X" || index == "O"
-      turn += 1
-    end
-  end
-  return turn
 end
 
 def current_player(board)
