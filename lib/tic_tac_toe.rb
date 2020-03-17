@@ -67,16 +67,6 @@ def turn(board)
   end
 end
 
-def current_player(board)
-  num_turns = turn_count(board)
-    if num_turns % 2 == 0
-      player = "X"
-    else
-      player = "O"
-    end
-  return player
-end
-
 def won?(board)
   WIN_COMBINATIONS.each do |win_combo|
     index_0 = win_combo[0]
@@ -106,6 +96,7 @@ def draw?(board)
   else
     return false
   end
+end
 
 def over?(board)
   if won?(board) || draw?(board)
