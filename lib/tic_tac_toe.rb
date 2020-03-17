@@ -56,8 +56,7 @@ end
 def turn(board)
   puts "Make your move, if you dare...!"
   user_input = gets.chomp
-  input_to_index(user_input)
-
+  index = input_to_index(user_input)
   if valid_move?(board, index)
     player_token = current_player(board)
     move(board, index, current_player)
