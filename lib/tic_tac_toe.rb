@@ -30,7 +30,7 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-  board[index] > 9 && board[index] == !position_taken?(board, index)
+  index > 9 && board[index] == !position_taken?(board, index)
 end
 
 def turn_count(board)
