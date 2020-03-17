@@ -42,7 +42,7 @@ def turn(board)
     player_token = current_player(board)
     move(board, index)
     display_board(board)
-  else 
+  else
     turn(board)
   end
 end
